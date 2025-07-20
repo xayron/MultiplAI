@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:multiplai/blocs/llm_bloc.dart';
+import 'package:multiplai/blocs/llm/llm_bloc.dart';
+import 'package:multiplai/blocs/sidebar/sidebar_cubit.dart';
 import 'package:multiplai/widgets/index.dart';
 
 void main() {
@@ -13,8 +14,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => LLMBloc(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => LLMBloc()),
+        BlocProvider(create: (context) => SidebarCubit()),
+      ],
       child: ScrollConfiguration(
         behavior: ScrollConfiguration.of(
           context,

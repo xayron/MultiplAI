@@ -1,6 +1,6 @@
 # MultiplAI
 
-A Flutter desktop application that provides a unified interface for accessing multiple AI chat services through embedded webviews. MultiplAI allows you to seamlessly switch between popular AI platforms like ChatGPT, Gemini, Claude, and many others without opening multiple browser tabs.
+A cross-platform desktop application that provides a unified interface for accessing multiple AI chat services through embedded webviews. MultiplAI allows you to seamlessly switch between popular AI platforms like ChatGPT, Gemini, Claude, and many others without opening multiple browser tabs.
 
 ## Features
 
@@ -62,15 +62,23 @@ lib/
 └── main.dart        # Application entry point
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
+2. **🎯 Flutter**
+   - Location: Root directory
+   - Technology: Flutter + Dart
+   - Size: ~80-120 MB
+   - Memory: ~300-400 MB
+
+### Flutter Version Setup
+
+#### Prerequisites
 
 - Flutter SDK (3.8 or higher)
 - Dart SDK
 - Git
 
-### Installation
+#### Installation
 
 1. **Clone the repository**
    ```bash

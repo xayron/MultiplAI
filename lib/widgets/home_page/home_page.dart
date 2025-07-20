@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:multiplai/blocs/llm_bloc.dart';
-import 'package:multiplai/blocs/llm_event.dart';
-import 'package:multiplai/blocs/llm_state.dart';
+import 'package:multiplai/blocs/llm/llm_bloc.dart';
+import 'package:multiplai/blocs/llm/llm_event.dart';
+import 'package:multiplai/blocs/llm/llm_state.dart';
 import 'package:multiplai/widgets/index.dart';
 
 class MyHomePage extends StatefulWidget {

@@ -30,6 +30,12 @@
         "icon": "https://registry.npmmirror.com/@lobehub/icons-static-png/1.55.0/files/light/perplexity.png"
     },
     {
+        "name": "Meta AI",
+        "description": "Meta AI is a company that provides a range of AI services, including chatbots, voice assistants, and more.",
+        "url": "https://www.meta.ai/",
+        "icon": "https://registry.npmmirror.com/@lobehub/icons-static-png/1.55.0/files/light/meta.png"
+    },
+    {
         "name": "Copilot",
         "description": "Bing is a company that provides a range of AI services, including chatbots, voice assistants, and more.",
         "url": "https://copilot.microsoft.com",

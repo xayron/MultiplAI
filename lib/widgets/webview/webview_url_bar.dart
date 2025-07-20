@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:multiplai/blocs/sidebar/sidebar_cubit.dart';
 
 class WebviewUrlBar extends StatelessWidget {
   final String currentUrl;
@@ -11,6 +13,24 @@ class WebviewUrlBar extends StatelessWidget {
     required this.isLoading,
     required this.onRefresh,
   });
+
+  Widget _expandedSidebarButton(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        context.read<SidebarCubit>().toggleSidebar();
+      },
+      child: Container(
+        padding: const EdgeInsets.all(4),
+        child: Icon(
+          Icons.keyboard_arrow_right,
+          size: 16,
+          color: Theme.of(
+            context,
+          ).colorScheme.onSurface.withAlpha((0.6 * 255).toInt()),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +50,16 @@ class WebviewUrlBar extends StatelessWidget {
       ),
       child: Row(
         children: [
+          BlocBuilder<SidebarCubit, SidebarState>(
+            builder: (context, state) {
+              return AnimatedSwitcher(
+                duration: const Duration(milliseconds: 300),
+                child: state.isExpanded
+                    ? const SizedBox.shrink()
+                    : _expandedSidebarButton(context),
+              );
+            },
+          ),
           // Reset button
           InkWell(
             onTap: onRefresh,

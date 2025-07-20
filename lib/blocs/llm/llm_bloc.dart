@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:multiplai/blocs/llm_event.dart';
-import 'package:multiplai/blocs/llm_state.dart';
+import 'package:multiplai/blocs/llm/llm_event.dart';
+import 'package:multiplai/blocs/llm/llm_state.dart';
 import 'package:multiplai/models/llm_service.dart';
 
 class LLMBloc extends Bloc<LLMEvent, LLMState> {
